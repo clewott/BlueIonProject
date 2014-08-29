@@ -4,76 +4,367 @@
   <meta charset="UTF-8">
   <title>Blue Ion Project</title>
 
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="Styles/styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <p>
-        SUBSCRIBE +
-      </p>
-      <ul>
-        <li><img src="Images/facebook-vector.gif" alt="Facebook"></li>
-        <li><img src="Images/RSS-vector.gif" alt="RSS Feed"></li>
-        <li><img src="Images/twitter-vector.gif" alt="Twitter"></li>
-        <li><img src="Images/youtube-vector.gif" alt="YouTube"></li>
-      </ul>
+    <!-- The Arrow on the side of the page -->
+    <div class="redArrow">
+      <img id="raIcon" src="Images/shape.png" alt="">
+      <p class="redP"></p>
+    </div>
+    <!-- Subscribe link and social icons -->
+    <header class="topHeader">
+    <div class="row">
+      <div class="col-lg-8 col-md-7 col-xs-12">
+        <div class="subscribe">
+          <p>
+            <a href="">SUBSCRIBE &#8226</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 col-xs-12">
+        <ul class="mainSocial">
+        <ul class="dots">
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+          <li>.</li>
+        </ul>
+          <li><a href="https://www.facebook.com/powellperalta" target="_blank"><img src="Images/facebook-vector.gif" alt="Facebook"></a></li>
+          <li><a href="http://powell-peralta.com/rss/" target="_blank"><img src="Images/RSS-vector.gif" alt="RSS Feed"></a></li>
+          <li><a href="https://twitter.com/PowellPeralta" target="_blank"><img src="Images/twitter-vector.gif" alt="Twitter"></a></li>
+          <li><a href="https://www.youtube.com/PowellPeralta" target="_blank"><img src="Images/youtube-vector.gif" alt="YouTube"></a></li>
+        </ul>
+      </div>
+    </div>
     </header>
-    <nav>
-      <li><a href="#">- SK8T NEWS -</a></li>
-      <li><a href="#">- SKATEBOARDERS -</a></li>
-      <li><a href="#">- BOARD DESIGN -</a></li>
-      <li><a href="#">- CONTACT US -</a></li>
-    </nav>
-    <div class="slider">
-      <img src="http://placehold.it/800x300" alt="Slider">
-    </div>
-    <div class="content">
-      <div class="block">
-        <h3>Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h3>
-        <p>DATE</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque amet laudantium, asperiores quas eius quaerat harum libero accusamus magni cupiditate numquam odio explicabo officiis, quod ex beatae, repellendus reiciendis a.</p>
-        <button>[ Read More ]</button>
+
+      <!-- Main navigation bar -->
+      <div class="navigation">
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <a href="#news">- SK8T NEWS -</a>
+              <a href="#dudes">- SKATEBOARDERS -</a>
+              <a href="#decks">- BOARD DESIGN -</a>
+              <a href="#contactForm">- CONTACT US -</a>
+            </ul>
+          </div>
+
+        </div>
+
       </div>
-      <div class="block">
-        <h3>Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h3>
-        <p>DATE</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, numquam voluptates, omnis dolor consequatur magnam et voluptate obcaecati voluptatum placeat officia, quam nihil fuga distinctio voluptatibus quis assumenda libero cum!</p>
-        <button>[ Read More ]</button>
+    <div class="row">
+      <div class="col-md-12">
+      <div class="slider">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="logo">
+            <img src="Images/Logo.png" alt="">
+          </div>
+          <div class="filter">
+            <img src="Images/filter.png" alt="">
+          </div>
+          <div class="item active">
+            <img src="Images/slider1.gif" alt="...">
+          </div>
+          <div class="item">
+            <img src="Images/slider2.gif" alt="...">
+          </div>
+          <div class="item">
+            <img src="Images/slider3.gif" alt="...">
+          </div>
+        </div>
       </div>
-      <div class="block">
-        <h3>Ray Barbee Talks 'Ban This'</h3>
-        <p>Date</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus neque voluptas odio sed quas quidem voluptatibus, iusto, adipisci facilis unde, possimus nulla iste in laborum qui est, esse eligendi!</p>
-        <button>[ Read More ]</button>
       </div>
     </div>
-    <div class="images">
-      <img src="http://placehold.it/800x400" alt="">
     </div>
-    <div class="boards">
-      <img src="http://placehold.it/800x300" alt="">
+
+    <!-- 3 Boxes For Articles -->
+    <div id="news" class="content">
+      <div class="row">
+        <div class="col-md-12 colContent">
+          <div class="col-md-4 colBlock">
+          <div class="block">
+            <h3>Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h3>
+            <p>Oct 10, 2013</p>
+            <p>It was just over 90 degrees in Los Angeles, but that didn’t stop the throngs from coming out to celebrate the 10th Annual Tony Hawk's Stand Up For Skateparks Benefit Presented by SLS Hotel & Casino Las Vegas on Saturday at the Green Acres Estate in Beverly Hills.</p>
+            <div class="button">
+            <button data-toggle="modal" data-target="#myModal1">[ Read More ]</button>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-4 colBlock">
+          <div class="block">
+            <h3>Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h3>
+            <p>March 10, 2013</p>
+            <p>The last thing Rodney Mullen, the godfather of street skating, wanted were competitive victories. In this exuberant talk he shares his love of the open skateboarding community and how the unique environments it plays in drive the creation of new tricks — fostering prolific ingenuity purely for passion's sake. (Filmed at TEDxUSC.)</p>
+            <div class="button">
+            <button data-toggle="modal" data-target="#myModal2">[ Read More ]</button>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-4 colBlock">
+          <div class="block">
+            <h3>Ray Barbee Talks 'Ban This'</h3>
+            <p>Oct 4, 2013</p>
+            <p>Since filming is in full swing for the Vans video Adventures With Chris has taken the opportunity to sit some of the team down to look behind the skating of some of their earlier parts. Today we sit down Ray Barbee, one of the smoothest guys to ever step on a skateboard and Chris’ childhood idol to discuss his epic 1989 Powell Peralta Ban This part and how filming has changed over the years.</p>
+            <div class="button">
+            <button data-toggle="modal" data-target="#myModal3">[ Read More ]</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contact">
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Tony Hawk Foundation Raises Big Money At Celeb Fundraiser</h4>
+          </div>
+          <div class="modal-body1">
+            Heating up the day was the Vert Demo, where a crowd of 1,000 watched in awe as action-sports luminaries Tony Hawk, Andy Macdonald, Tom Schaar, Elliot Sloan, Kevin Staab, Mitchie Brusco, Lizzie Armanto, and BMXer Coco Zurita performed an X Games-style demo on Tony’s personal ramp! The excitement of the Vert Demo was followed by a sizzling live musical performance by Grammy nominee Modest Mouse.
+
+Tony Hawk’s Stand Up For Skateparks is a family-friendly event, which began in 2004 with a mission to raise funds to help empower at-risk youth through the creation of free, quality public skateparks in low-income communities across the U.S. In the past decade, the Tony Hawk Foundation has helped fund 537 skateparks in all 50 states, and provided technical assistance to over 2,000 community-skatepark projects throughout the world.
+
+This year’s action-packed, star-studded event was attended by some of the most recognized names in entertainment and action sports. Attendees included Tony Alva, Chris Cole, Maximillion Cooper, Fred Durst, Rob Dyrdek, Jason Ellis, Mike “Rooftop” Escamilla, Perry and Etty Farrell, Jon Favreau, Colin Ford, Willie Garson, Brian Austin Green, Ben Harper, Corbin Harris, Mat Hoffman, Olivia Holt, Nyjah Huston, Eve Jihan, Jason Lee, Chuck Liddell, Chris and Kyle Massey, Modest Mouse, Rodney Mullen, Lauren Potter, Michael Rapaport, Dylan Riley Snyder, Mike Vallely, Bill Walton, and Stevie Williams.
+
+With a decade of successful events under its belt, this year’s Tony Hawk’s Stand Up For Skateparks raised $860,000, including $20,000 to help complete a skatepark in Detroit, Michigan.
+
+“Ten years ago, we started Stand Up For Skateparks in a bowling alley for an event that was attended by a few hundred people and was mostly met with curiosity,” said Tony Hawk. “Today, I am honored and humbled to see how the event has grown. It has become a staple for top-notch sponsors, celebrities, and athletes who support the Foundation’s mission to provide free, quality skateparks in low-income communities. Their support brings awareness to the need for positive outlets for kids in these communities, and it truly makes a difference. I am beyond grateful.”
+
+In addition to the awe-inspiring Vert Demo and rocking musical performances, the family-friendly event included interactive games for kids of all ages, delectable food, and a live and silent auction that featured two unique high-performance luxury vehicles, as well as a wide variety of other unique items and experiences: custom 1972 Triumph Bonneville chopper; custom 2014 Lexus IS 250 F SPORT designed by Tony Hawk, Lexus and DUB; personal Los Angeles Lakers experience hosted by basketball great Bill Walton; Mammoth Mountain Blackcard Package; Private Luxury Yacht Experience; a Jam session with Metallica Bassist Robert Trujillo; one-of-a-kind vacations packages to Cabo San Lucas and Costa Rica; and more.
+
+The 10th Annual Tony Hawk’s Stand Up For Skateparks benefit was made successful through the generosity and support of SLS Hotel & Casino Las Vegas, Kohl’s, Starkey Hearing Foundation, Activision, Bravo Sports, Clif Kid, Dynacraft, HEXbug, Lexus, Nixon, olloclip, SIGG, Sweetwater, The Yucaipa Companies, and RIDE Channel.
+
+The event was Co-Chaired by Tony Hawk and award-winning actor, director and screenwriter, Jon Favreau. Other Benefit Committee members include Ron Burkle, Chantal and Stephen J. Cloobeck, Patrick Dempsey, Fred Durst, Leeza Gibbons, Bobby Kotick, Jason Lee, Tommy Lee, Chuck Liddell, Howie Mandel, Rodney Mullen, Sam Nazarian, Lyn-Z and Travis Pastrana, Christian Slater, Steve Van Doren, Mark Wahlberg, Lori and Bill Walton, Shaun White, and DJ-Z-Trip.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Rodney Mullen: Pop an ollie and innovate! (TED Talk)</h4>
+          </div>
+          <div class="modal-body2">
+            <iframe src="http://embed-ssl.ted.com/talks/rodney_mullen_pop_an_ollie_and_innovate.html" width="100%" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Ray Barbee Talks 'Ban This'</h4>
+          </div>
+          <div class="modal-body3">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/0_vtyIO-SFk" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Photos of the skateboarders -->
+    <div id="dudes" class="images">
+      <div class="row">
+        <div class="col-lg-8 mainColumn">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 skateImage" data-toggle="modal" data-target="#lanceModal">
+            <div class="Lance">
+              <h2>LANCE MOUNTAIN</h2>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-s-6 col-xs-12 skateImage" data-toggle="modal" data-target="#rodneyModal">
+            <div class="Rodney">
+              <h2>RODNEY MULLEN</h2>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-s-12 col-xs-12 stevePadding" data-toggle="modal" data-target="#steveModal">
+            <div class="Steve">
+              <h2>STEVE CABALLERO</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 tommyPadding" data-toggle="modal" data-target="#tommyModal">
+          <div class="Tommy">
+            <h2>TOMMY GUERRERO</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Lance Modal -->
+    <div class="modal fade" id="lanceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Learn More About Lance Mountain!</h4>
+          </div>
+          <div class="modal-body2">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/P7YkYLhqI9A" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodney Mullen -->
+    <div class="modal fade" id="rodneyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Learn More About Rodney Mullen!</h4>
+          </div>
+          <div class="modal-body2">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/ZgEbxU5tZu4" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Steve Caballero -->
+    <div class="modal fade" id="steveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Learn More About Steve Caballero!</h4>
+          </div>
+          <div class="modal-body2">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/Gajxd6ISIYc" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Tommy Guerrero-->
+    <div class="modal fade" id="tommyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Learn More About Tommy Guerrero!</h4>
+          </div>
+          <div class="modal-body2">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/c16yTdi1zFQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- The 10 skateboards -->
+    <div id="decks" class="boards">
+      <div class="row">
+        <div class="col-md-12 boardsCol">
+          <ol>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard1.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard2.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard3.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard4.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard5.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard6.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard7.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard8.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard9.gif" alt="">
+            </li>
+            <li>
+              <img data-toggle="tooltip" data-placement="bottom" title="This is a really cool skateboard that a lof of people want to have!" src="Images/skateboard10.gif" alt="">
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Us box with form -->
+    <div id="contactForm" class="contact">
+      <div class="row">
+      <div class="col-md-6 col-xs-12">
       <div class="left">
         <h3>Contact Us for More Information</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat officia repellat odio tempore laboriosam provident, velit odit et quibusdam, ut reprehenderit animi at quaerat sunt eos maiores, ducimus consequuntur nostrum.</p>
         <ul>
-          <li><img src="Images/facebook-contact-icon.gif" alt="Facebook"></li>
-          <li><img src="Images/rss-contact-icon.gif" alt="RSS"></li>
-          <li><img src="Images/twitter-contact-icon.gif" alt="Twitter"></li>
-          <li><img src="Images/youtube-contact-icon.gif" alt="YouTube"></li>
+          <li><a href="https://www.facebook.com/powellperalta" target="_blank"><img src="Images/facebook-contact-icon.gif" alt="Facebook"></a></li>
+          <li><a href="http://powell-peralta.com/rss/" target="_blank"><img src="Images/rss-contact-icon.gif" alt="RSS"></a></li>
+          <li><a href="https://twitter.com/PowellPeralta" target="_blank"><img src="Images/twitter-contact-icon.gif" alt="Twitter"></a></li>
+          <li><a href="https://www.youtube.com/PowellPeralta" target="_blank"><img src="Images/youtube-contact-icon.gif" alt="YouTube"></a></li>
         </ul>
       </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
       <div class="right">
-        <form action="">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="submit">
+        <form id="contactForm" action="">
+          <input type="text" placeholder="NAME" required><br>
+          <input type="text" placeholder="EMAIL" required><br>
+          <textarea rows="4" placeholder="YOUR MESSAGE"></textarea><br>
+          <input class="submitButton" type="submit">
         </form>
+      </div>
+      </div>
       </div>
     </div>
   </div>
